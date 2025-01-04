@@ -1,0 +1,8 @@
+<div>
+    <div class="question">{{quizService.currentQuestion().question}}</div>
+    <div class="answers">
+        @for (answer of quizService.currentAnswerOptions(); track $index) {
+            <app-answers [answerText]="answer" [answerIndex]="$index" />
+        }
+    </div>
+  </div>
