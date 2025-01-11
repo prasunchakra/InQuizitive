@@ -1,0 +1,49 @@
+<div
+  class="min-h-screen bg-[#0094da] flex flex-col items-center justify-center px-6 py-8"
+>
+  <!-- Header -->
+  <header class="text-center text-white mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to  In<span class="text-[#00f28c]">Quiz</span>itive</h1>
+    <p class="text-lg md:text-xl font-light">
+      Engage your mind with quizzes that inspire, educate, and challenge you.
+    </p>
+  </header>
+
+  <!-- Tiles Container -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
+    <!-- Tile 1: National Youth Day Quiz -->
+    <div
+      class="tile bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform"
+    >
+      <h2 class="text-2xl font-bold text-[#0094da] mb-4">
+        National Youth Day Quiz
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Test your knowledge about Swami Vivekananda and his teachings.
+      </p>
+      <button
+        class="bg-[#0094da] text-white px-4 py-2 rounded shadow hover:bg-[#0078b8] transition-colors"
+        (click)="startQuiz()"
+      >
+        Start Quiz
+      </button>
+    </div>
+
+    <!-- Tile 2-6: Coming Soon -->
+    <div
+      *ngFor="let i of [2, 3, 4, 5, 6]"
+      class="tile bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform"
+    >
+      <h2 class="text-2xl font-bold text-gray-500 mb-4">Coming Soon</h2>
+      <p class="text-gray-600 mb-6">
+        Exciting new quizzes are on their way! Stay tuned.
+      </p>
+      <button
+        class="bg-gray-400 text-white px-4 py-2 rounded shadow cursor-not-allowed"
+        disabled
+      >
+        Coming Soon
+      </button>
+    </div>
+  </div>
+</div>

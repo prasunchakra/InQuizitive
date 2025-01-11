@@ -1,22 +1,68 @@
-<div class="quiz">
-    @if (quizService.showResults()) {   
-        <div class="results">
-            <div class="congratulations">Congratulations!</div>
-            <div class="results-info">
-                <div>You have completed the quiz.</div>
-                <div>
-                    You've got {{ quizService.correctAnswers() }} of
-                    {{ quizService.questions().length }} right.
-                </div>
-            </div>
-            <div class="next-button" (click)="quizService.restart()">Restart</div>
-        </div>
+<div>
+  @if (quizService.showResults()) {
+
+  <div
+  class="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-white"
+  style="background-color: #0094da;"
+>
+  <!-- Score Card Container -->
+  <div class="w-full max-w-md bg-white text-[#0094da] rounded-lg shadow-lg p-8 text-center">
+    <h2 class="text-3xl font-bold mb-4">Your Score</h2>
+    <p class="text-lg font-medium mb-6">
+      You scored <span class="font-bold text-4xl">{{ quizService.correctAnswers() }}</span> out of
+      <span class="font-bold text-4xl">{{ quizService.questions().length }}</span>
+    </p>
+
+    <!-- Feedback Message -->
+    @if(quizService.correctAnswers() / quizService.questions().length >= 0.7) {
+      <p class="text-lg font-semibold mb-6">
+        🌟 Amazing! You've done an excellent job!
+      </p>
+    } @else if(quizService.correctAnswers() / quizService.questions().length >= 0.4) {
+      <p class="text-lg font-semibold mb-6">
+        👍 Good effort! Keep learning more about Swami Vivekananda.
+      </p>
+    } @else {
+      <p class="text-lg font-semibold mb-6">
+        😅 Don't worry, try again and improve!
+      </p>
     }
-    @else {
-    <div>
-        <div class="score">Question {{quizService.currentQuestionIndex() + 1}}/{{quizService.questions().length}}</div>
-        <app-questions />
-        <div class="next-button" (click)="quizService.goToNextQuestion()" [class.disabled]="!quizService.selectedAnswer()" >Next question</div>
+    <!-- Buttons -->
+    <div class="flex flex-col gap-4">
+      <!-- Retake Quiz Button -->
+      <button
+        (click)="retakeQuiz()"
+        class="w-full py-3 rounded-lg bg-[#0094da] text-white font-semibold shadow-md hover:bg-[#0078b8] transition-colors"
+      >
+        Retake Quiz
+      </button>
+
+      <!-- Share on Facebook Button -->
+      <button
+        (click)="shareOnFacebook()"
+        class="w-full py-3 rounded-lg bg-[#3b5998] text-white font-semibold shadow-md hover:bg-[#2d4373] transition-colors"
+      >
+        Share on Facebook
+      </button>
     </div>
-    }
+  </div>
+</div>
+
+  } @else {
+  <div class="quiz">
+    <div class="score">
+      Question {{ quizService.currentQuestionIndex() + 1 }}/{{
+        quizService.questions().length
+      }}
+    </div>
+    <app-questions />
+    <div
+      class="next-button"
+      (click)="quizService.goToNextQuestion()"
+      [class.disabled]="!quizService.selectedAnswer()"
+    >
+      Next question
+    </div>
+  </div>
+  }
 </div>

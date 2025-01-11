@@ -39,80 +39,190 @@ export class QuizService {
       .map((a) => a.value);
   }
   getMockQuestions(): QuestionInterface[] {
-    return [
+    const questions: QuestionInterface[] =  [
       {
-        question: 'What is Django?',
+        question: 'What was Swami Vivekananda’s primary message to the youth of India?',
         incorrectAnswers: [
-          'A Python library for data analysis',
-          'A JavaScript framework for front-end development',
-          'A Ruby-based web framework',
+          'Focus only on academic success',
+          'Follow Western culture',
+          'Avoid spiritual practices',
         ],
-        correctAnswer: 'A high-level Python Web framework',
+        correctAnswer: 'Be strong, fearless, and work towards self-improvement',
       },
       {
-        question: 'Which architectural pattern does Django follow?',
+        question: 'Which teaching of Swami Vivekananda emphasizes unity in diversity?',
         incorrectAnswers: [
-          'Model-View-Presenter (MVP)',
-          'Model-Controller-View (MCV)',
-          'Model-Adapter-View (MAV)',
+          'Truth is absolute',
+          'Spirituality is for monks only',
+          'Only one religion leads to God',
         ],
-        correctAnswer: 'Model-View-Template (MVT)',
+        correctAnswer: 'All religions are different paths leading to the same truth',
       },
       {
-        question: 'Which command is used to create a new Django project?',
+        question: 'According to Swami Vivekananda, what is the greatest strength of youth?',
         incorrectAnswers: [
-          'django newproject <name>',
-          'django-admin build <name>',
-          'django new <name>',
+          'Wealth',
+          'Fame',
+          'Physical power',
         ],
-        correctAnswer: 'django-admin startproject <name>',
+        correctAnswer: 'A focused mind and a strong will',
       },
       {
-        question: 'Which command is used to create a new Django app within a project?',
+        question: 'What was Swami Vivekananda’s view on education?',
         incorrectAnswers: [
-          'django-admin createapp <app_name>',
-          'django createapp <app_name>',
-          'django startapplication <app_name>',
+          'Education should only focus on earning wealth',
+          'Education should be restricted to a privileged few',
+          'Education should prioritize memorization over understanding',
         ],
-        correctAnswer: 'python manage.py startapp <app_name>',
+        correctAnswer: 'Education should focus on character building and self-reliance',
       },
       {
-        question: 'Where do you define installed apps in a Django project?',
+        question: 'Swami Vivekananda believed that spiritual awakening among youth could lead to what?',
         incorrectAnswers: [
-          'In the views.py file',
-          'In the models.py file',
-          'In the admin.py file',
+          'Increased political dominance',
+          'Greater material wealth',
+          'Isolation from society',
         ],
-        correctAnswer: 'In the settings.py file under INSTALLED_APPS',
+        correctAnswer: 'The transformation and upliftment of society',
       },
       {
-        question: 'Which file is typically used to configure URLs in a Django project?',
+        question: 'Which famous quote by Swami Vivekananda inspires youth to take responsibility for their lives?',
         incorrectAnswers: [
-          'routing.py',
-          'views.py',
-          'models.py',
+          '"Be satisfied with what you have"',
+          '"Blame others for your misfortunes"',
+          '"Wait for the perfect moment to act"',
         ],
-        correctAnswer: 'urls.py',
+        correctAnswer: '"Arise, awake, and stop not till the goal is reached"',
       },
       {
-        question: 'Which command is used to apply database migrations in Django?',
+        question: 'Swami Vivekananda’s contribution to social reform emphasized which of the following?',
         incorrectAnswers: [
-          'python manage.py build',
-          'python manage.py runserver',
-          'python manage.py collectstatic',
+          'Promoting caste divisions',
+          'Focusing only on industrial development',
+          'Encouraging dependence on foreign nations',
         ],
-        correctAnswer: 'python manage.py migrate',
+        correctAnswer: 'Eradicating caste discrimination and empowering the underprivileged',
       },
       {
-        question: 'Which default database does Django use if not specified otherwise?',
+        question: 'What did Swami Vivekananda teach about service to others?',
         incorrectAnswers: [
-          'MySQL',
-          'PostgreSQL',
-          'MongoDB',
+          'It is optional and only for monks',
+          'It distracts from personal spiritual growth',
+          'It should only be offered to those of the same religion',
         ],
-        correctAnswer: 'SQLite',
+        correctAnswer: 'Serving humanity is the highest form of worship',
       },
-    ];    
+      {
+        question: 'According to Swami Vivekananda, what was the purpose of youth empowerment?',
+        incorrectAnswers: [
+          'To dominate other nations',
+          'To achieve personal fame',
+          'To escape societal responsibilities',
+        ],
+        correctAnswer: 'To transform India into a strong, self-reliant nation',
+      },
+      {
+        question: 'Swami Vivekananda’s teachings emphasized the importance of which quality in achieving success?',
+        incorrectAnswers: [
+          'Luck',
+          'Wealth',
+          'Connections',
+        ],
+        correctAnswer: 'Self-confidence and perseverance',
+      },
+      {
+        question: 'Where did Swami Vivekananda deliver his famous speech beginning with "Sisters and Brothers of America"?',
+        incorrectAnswers: [
+          'New York',
+          'Los Angeles',
+          'Boston',
+        ],
+        correctAnswer: 'Chicago',
+      },
+      {
+        question: 'In which year was Swami Vivekananda born?',
+        incorrectAnswers: [
+          '1860',
+          '1862',
+          '1870',
+        ],
+        correctAnswer: '1863',
+      },
+      {
+        question: 'What was Swami Vivekananda’s birth name?',
+        incorrectAnswers: [
+          'Ramakrishna',
+          'Satyendranath',
+          'Narasimha',
+        ],
+        correctAnswer: 'Narendranath Datta',
+      },
+      {
+        question: 'What is the significance of January 12 in India?',
+        incorrectAnswers: [
+          'Gandhi Jayanti',
+          'Teacher’s Day',
+          'Youth Empowerment Day',
+        ],
+        correctAnswer: 'National Youth Day',
+      },
+      {
+        question: 'Which Indian spiritual leader inspired Swami Vivekananda?',
+        incorrectAnswers: [
+          'Sri Aurobindo',
+          'Mahatma Gandhi',
+          'Rabindranath Tagore',
+        ],
+        correctAnswer: 'Ramakrishna Paramahansa',
+      },
+      {
+        question: 'Which organization was founded by Swami Vivekananda?',
+        incorrectAnswers: [
+          'Arya Samaj',
+          'Brahmo Samaj',
+          'Theosophical Society',
+        ],
+        correctAnswer: 'Ramakrishna Mission',
+      },
+      {
+        question: 'Swami Vivekananda introduced Indian philosophy to the Western world through which school of thought?',
+        incorrectAnswers: [
+          'Sankhya',
+          'Nyaya',
+          'Vaisheshika',
+        ],
+        correctAnswer: 'Vedanta',
+      },
+      {
+        question: 'What was the main theme of Swami Vivekananda’s teachings?',
+        incorrectAnswers: [
+          'Political reform',
+          'Economic development',
+          'Environmental protection',
+        ],
+        correctAnswer: 'Youth empowerment and spiritual awakening',
+      },
+      {
+        question: 'Which scripture did Swami Vivekananda heavily promote as a source of spiritual knowledge?',
+        incorrectAnswers: [
+          'The Quran',
+          'The Bible',
+          'The Ramayana',
+        ],
+        correctAnswer: 'The Bhagavad Gita',
+      },
+      {
+        question: 'In which city did Swami Vivekananda pass away?',
+        incorrectAnswers: [
+          'Varanasi',
+          'Delhi',
+          'Mumbai',
+        ],
+        correctAnswer: 'Kolkata',
+      },
+    
+    ]; 
+    return questions.sort(() => Math.random() - 0.5);   
   }
   selectAnswer(answer: string) {
     this.selectedAnswer.set(answer);

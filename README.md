@@ -1,59 +1,62 @@
-# Quiztified
+# InQuizitive
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+An interactive quiz platform designed to spark curiosity and engage learners. Built with scalability in mind, it’s on track to become a full-fledged EdTech solution—integrating robust LMS features, dynamic analytics, and more.
 
-## Development server
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
-```
+- **Interactive Quizzes**: Engage learners with quizzes designed to test and expand knowledge.  
+- **Scalable Architecture**: Ready to evolve into a full LMS, complete with extensive course management capabilities.  
+- **Dynamic Analytics**: Gain insights into user performance and progress with planned analytics features.  
+- **Tailwind CSS**: Rapid UI development with a utility-first CSS framework.  
+- **Angular 19**: A modern web application framework for high-performance, maintainable apps.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Tech Stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Front-end**: [Angular 19](https://angular.io/)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **Build Tool**: [Angular CLI](https://angular.io/cli)
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## Prerequisites
 
-## Building
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- Angular CLI (installed globally):  
+  ```bash
+  npm install -g @angular/cli
+  ```
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Installation
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. Clone the repository:  
+  ```bash
+  git clone https://github.com/your-username/inQuizitive.git
+  ```
 
-## Running unit tests
+2. Navigate to the project directory:  
+    ```bash
+    cd inQuizitive
+    ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+3. Install dependencies:  
+  ```bash
+  npm install
+  ```
 
-```bash
-ng test
-```
+4. Start the development server:  
+  ```bash
+  ng serve
+  ```
 
-## Running end-to-end tests
+5. Open your browser and navigate to:  
+  ```bash
+  http://localhost:4200
+  ```
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

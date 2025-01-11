@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { QuizComponent } from './core/components/quiz/quiz.component';
+import { HeadersComponent } from './common/components/headers/headers.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [QuizComponent],
+  imports: [RouterModule, HeadersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
