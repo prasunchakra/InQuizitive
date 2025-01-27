@@ -23,15 +23,50 @@
       </p>
       <button
         class="bg-[#0094da] text-white px-4 py-2 rounded shadow hover:bg-[#0078b8] transition-colors"
-        (click)="startQuiz()"
+        (click)="startQuiz('national-youth-day')"
       >
         Start Quiz
       </button>
     </div>
 
-    <!-- Tile 2-6: Coming Soon -->
     <div
-      *ngFor="let i of [2, 3, 4, 5, 6]"
+      class="tile bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform"
+    >
+      <h2 class="text-2xl font-bold text-[#0094da] mb-4">
+        Netaji Subhas Quiz
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Test your knowledge about Netaji Subhas Chandra Bose and his teachings.
+      </p>
+      <button
+        class="bg-[#0094da] text-white px-4 py-2 rounded shadow hover:bg-[#0078b8] transition-colors"
+        (click)="startQuiz('netaji-subhas')"
+      >
+        Start Quiz
+      </button>
+    </div>
+
+
+    <div
+      class="tile bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform"
+    >
+      <h2 class="text-2xl font-bold text-[#0094da] mb-4">
+        Republic Day Quiz
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Test your knowledge about Republic Day and its significance in India's history.
+      </p>
+      <button
+        class="bg-[#0094da] text-white px-4 py-2 rounded shadow hover:bg-[#0078b8] transition-colors"
+        (click)="startQuiz('republic-day')"
+      >
+        Start Quiz
+      </button>
+    </div>
+
+    <!-- Tile 3-6: Coming Soon -->
+    <div
+      *ngFor="let i of [ 4, 5, 6]"
       class="tile bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform"
     >
       <h2 class="text-2xl font-bold text-gray-500 mb-4">Coming Soon</h2>

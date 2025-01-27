@@ -1,41 +1,125 @@
 <div
-class="min-h-screen flex flex-col items-center justify-center text-white px-4 py-8"
-style="background-color: #0094da;"
+  class="min-h-screen flex flex-col items-center justify-center text-white px-4 py-8"
+  style="background-color: #0094da;"
 >
-<!-- Title / Header -->
-<h1 class="text-3xl md:text-5xl font-bold mb-4 text-center">
-  National Youth Day
-</h1>
-<p class="text-lg md:text-xl font-light mb-8 text-center max-w-2xl">
-  Test your knowledge about the life, teachings, and philosophy of 
-  <strong>Swami Vivekananda</strong> on the occasion of National Youth Day.
-</p>
+  <!-- Title / Header -->
+  <!-- Vivekananda -->
+  <h1
+    *ngIf="quiz === 'national-youth-day'"
+    class="text-3xl md:text-5xl font-bold mb-4 text-center"
+  >
+    National Youth Day
+  </h1>
+  <!-- Netaji -->
+  <h1
+    *ngIf="quiz === 'netaji-subhas'"
+    class="text-3xl md:text-5xl font-bold mb-4 text-center"
+  >
+    Netaji Subhas Chandra Bose Quiz
+  </h1>
+  <!-- Republic Day -->
+  <h1
+    *ngIf="quiz === 'republic-day'"
+    class="text-3xl md:text-5xl font-bold mb-4 text-center"
+  >
+    Republic Day Quiz
+  </h1>
 
-<!-- (Optional) Image or an Illustration -->
-<img
-  src="nyd.jpg"
-  alt="Swami Vivekananda"
-  class="w-48 md:w-64 rounded-md mb-8 shadow-lg"
-/>
-
-<!-- Call to Action Button -->
-<button
-  (click)="navigateToQuiz()"
-  class="bg-white text-[#0094da] font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition-colors"
->
-  Start the Quiz
-</button>
-
-<!-- Additional Content / Info -->
-<div class="mt-8 max-w-2xl text-center text-sm md:text-base">
-  <p class="mb-2">
-    National Youth Day in India is observed on January 12 every year to honor the 
-    birth anniversary of Swami Vivekananda. He was a key figure in the introduction 
-    of Indian philosophies of Vedanta and Yoga to the Western world.
+  <!-- Intro Paragraph -->
+  <!-- Vivekananda -->
+  <p
+    *ngIf="quiz === 'national-youth-day'"
+    class="text-lg md:text-xl font-light mb-8 text-center max-w-2xl"
+  >
+    Test your knowledge about the life, teachings, and philosophy of
+    <strong>Swami Vivekananda</strong> on the occasion of National Youth Day.
   </p>
-  <p>
-    By taking this quiz, you'll learn more about his teachings, his thoughts on youth 
-    empowerment, and his contributions towards social reform.
+  <!-- Netaji -->
+  <p
+    *ngIf="quiz === 'netaji-subhas'"
+    class="text-lg md:text-xl font-light mb-8 text-center max-w-2xl"
+  >
+    Test your knowledge about the life, contributions, and enduring legacy of
+    <strong>Netaji Subhas Chandra Bose</strong>.
   </p>
-</div>
+  <!-- Republic Day -->
+  <p
+    *ngIf="quiz === 'republic-day'"
+    class="text-lg md:text-xl font-light mb-8 text-center max-w-2xl"
+  >
+    Celebrate India's Constitution and democratic values by testing your knowledge
+    about the history and significance of <strong>Republic Day</strong>.
+  </p>
+
+  <!-- (Optional) Image or an Illustration -->
+  <!-- Vivekananda -->
+  <img
+    *ngIf="quiz === 'national-youth-day'"
+    src="nyd.jpg"
+    alt="Swami Vivekananda"
+    class="w-48 md:w-64 rounded-md mb-8 shadow-lg"
+  />
+  <!-- Netaji -->
+  <img
+    *ngIf="quiz === 'netaji-subhas'"
+    src="facts.jpeg"
+    alt="Netaji Subhas Chandra Bose"
+    class="w-48 md:w-64 rounded-md mb-8 shadow-lg"
+  />
+  <!-- Republic Day -->
+  <img
+    *ngIf="quiz === 'republic-day'"
+    src="26jan.jpg"
+    alt="Republic Day Celebration"
+    class="w-48 md:w-64 rounded-md mb-8 shadow-lg"
+  />
+
+  <!-- Call to Action Button -->
+  <button
+    (click)="navigateToQuiz(quiz)"
+    class="bg-white text-[#0094da] font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition-colors"
+  >
+    Start the Quiz
+  </button>
+
+  <!-- Additional Content / Info -->
+  <div class="mt-8 max-w-2xl text-center text-sm md:text-base">
+    <!-- Vivekananda Info -->
+    <div *ngIf="quiz === 'national-youth-day'">
+      <p class="mb-2">
+        National Youth Day in India is observed on January 12 every year to honor
+        the birth anniversary of Swami Vivekananda. He was a key figure in
+        introducing Indian philosophies of Vedanta and Yoga to the Western world.
+      </p>
+      <p>
+        By taking this quiz, you'll learn more about his teachings, his thoughts on youth
+        empowerment, and his contributions towards social reform.
+      </p>
+    </div>
+
+    <!-- Netaji Info -->
+    <div *ngIf="quiz === 'netaji-subhas'">
+      <p class="mb-2">
+        Netaji Subhas Chandra Bose was a prominent leader of India's freedom struggle.
+        His indomitable spirit and unwavering patriotism continue to inspire millions.
+      </p>
+      <p>
+        By taking this quiz, you'll explore his life, his ideologies, and
+        the invaluable role he played in India’s road to independence.
+      </p>
+    </div>
+
+    <!-- Republic Day Info -->
+    <div *ngIf="quiz === 'republic-day'">
+      <p class="mb-2">
+        Republic Day in India is celebrated on January 26 every year to commemorate
+        the adoption of the Indian Constitution in 1950, marking the country's
+        transition to a sovereign republic.
+      </p>
+      <p>
+        By taking this quiz, you'll discover facts about the Constitution, key figures
+        involved, and the traditions that make Republic Day special.
+      </p>
+    </div>
+  </div>
 </div>

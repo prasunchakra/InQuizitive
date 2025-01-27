@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LandingComponent {
   constructor(private router: Router) {}
-  startQuiz(): void {
-    this.router.navigate(['/home']);
+  startQuiz(quiz: string): void {
+    this.router.navigate([`/home/${quiz}`]);
   } 
 }

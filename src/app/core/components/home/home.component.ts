@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  constructor(private router: Router) {}
+  quiz: string = '';
+  constructor(private router: Router, private route: ActivatedRoute) {}
+  ngOnInit() {
+    this.route.params.subscribe((params) => {
+      this.quiz = params['quiz'];
+    });
+  }
 
-  navigateToQuiz() {
-    this.router.navigate(['/quiz']);
+  navigateToQuiz(quiz: string) {
+    this.router.navigate([`/quiz/${quiz}`]);
   }
 }

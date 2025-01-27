@@ -5,6 +5,6 @@ import { LandingComponent } from './common/components/landing/landing.component'
 
 export const routes: Routes = [
     {path: '', component:LandingComponent},
-    {path: 'home', component: HomeComponent},
-    {path: 'quiz', component: QuizComponent}    
+    {path: 'home/:quiz', component: HomeComponent},
+    {path: 'quiz/:quiz', component: QuizComponent}
 ];
